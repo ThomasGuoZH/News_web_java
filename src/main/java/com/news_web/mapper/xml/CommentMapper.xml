@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news_web.mapper.CommentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.news_web.models.Comment">
+        <id column="id" property="id" />
+        <result column="news_title" property="newsTitle" />
+        <result column="content" property="content" />
+        <result column="parent_id" property="parentId" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="deleted_at" property="deletedAt" />
+        <result column="title" property="title" />
+        <result column="author" property="author" />
+        <result column="type" property="type" />
+        <result column="parent_author" property="parentAuthor" />
+        <result column="likes" property="likes" />
+        <result column="channel" property="channel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        news_title, id, content, parent_id, created_at, updated_at, deleted_at, title, author, type, parent_author, likes, channel
+    </sql>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news_web.mapper.NewsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.news_web.models.News">
+        <id column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="pic" property="pic" />
+        <result column="time" property="time" />
+        <result column="src" property="src" />
+        <result column="category" property="category" />
+        <result column="url" property="url" />
+        <result column="weburl" property="weburl" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        title, content, pic, time, src, category, url, weburl
+    </sql>
+
+</mapper>
